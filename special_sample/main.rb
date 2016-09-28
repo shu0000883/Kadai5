@@ -4,6 +4,9 @@ require 'dxruby'
 require_relative 'player'
 require_relative 'enemy'
 
+#ウィンドウ表示
+Window.caption = "Ruby_game_crash"
+
 Window.width  = 800
 Window.height = 600
 
