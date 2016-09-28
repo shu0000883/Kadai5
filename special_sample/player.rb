@@ -5,4 +5,6 @@ class Player < Sprite
     self.x += Input.x
     self.y += Input.y
   end
+
+  
 end

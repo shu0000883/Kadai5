@@ -10,6 +10,6 @@ class Enemy < Sprite
 
   # 他のオブジェクトから衝突された際に呼ばれるメソッド
   def hit(obj)
-    self.vanish
+    self.vanish    
   end
 end

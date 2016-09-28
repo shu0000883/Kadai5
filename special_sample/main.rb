@@ -7,6 +7,11 @@ require_relative 'enemy'
 #ウィンドウ表示
 Window.caption = "Ruby_game_crash"
 
+#追加：カウント
+font = Font.new(32)
+count=0
+
+
 Window.width  = 800
 Window.height = 600
 
@@ -33,6 +38,8 @@ Window.loop do
   #追加：背景表示
   Window.draw(0, 0, bg_img)
 
+  Window.draw_font(0, 0, "score:#{count}", font) 
+
   Sprite.update(enemies)
   Sprite.draw(enemies)
 
@@ -40,5 +47,8 @@ Window.loop do
   player.draw
 
   # 当たり判定
-  Sprite.check(player, enemies)
+  #追加：カウント
+  if Sprite.check(player, enemies) 
+    count+=1
+  end
 end
