@@ -7,6 +7,10 @@ require_relative 'enemy'
 Window.width  = 800
 Window.height = 600
 
+#追加：背景表示
+bg_img = Image.load("earth.png")
+
+
 player_img = Image.load("player.png")
 player_img.setColorKey([0, 0, 0])
 
@@ -22,6 +26,9 @@ end
 
 Window.loop do
   break if Input.keyPush?(K_ESCAPE)
+
+  #追加：背景表示
+  Window.draw(0, 0, bg_img)
 
   Sprite.update(enemies)
   Sprite.draw(enemies)
